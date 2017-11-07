@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "es6",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2015"],
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "target": "es5"
+  },
+  "files": [
+    "ionic-unzip.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
