@@ -1,6 +1,6 @@
 {
   "name": "angular-ionic-unzip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a simple wrapper using JSZip to unzip a file and save to the local filesystem using ionic-native's File",
   "main": "index.js",
   "scripts": {
