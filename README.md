@@ -94,7 +94,7 @@ This expects the zip file to already be downloaded on the local file system in t
         <code>boolean</code>
       </td>
       <td>
-        <p>Overwrite existing folders and files</p>
+        <p>Overwrite existing folders and files, default true</p>
   </td>
     </tr>
       <tr>
@@ -104,7 +104,7 @@ This expects the zip file to already be downloaded on the local file system in t
             <code>boolean</code>
           </td>
           <td>
-            <p>Log file creation output to the console</p>
+            <p>Log file creation output to the console, default false</p>
       </td>
         </tr>
   </tbody>

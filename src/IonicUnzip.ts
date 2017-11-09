@@ -30,17 +30,20 @@ export class IonicUnzip {
                         Object.keys(zip.files).forEach((filename: any) => {
                             zip.files[filename].async('arraybuffer').then((fileData) => {
 
-                                this.fs.createFile(this.dataDir(), filename, this.options.overwrite).then(() => {
-                                    this.fs.writeFile(this.dataDir(), filename, fileData, {replace: this.options.overwrite}).then((fileInfo) => {
+                                let zipFileName = filename.split('/').slice(-1);
+                                let path = filename.substr(0, filename.lastIndexOf("/")) || '';
+
+                                this.fs.createFile(this.dataDir() + path, zipFileName, this.options.overwrite).then(() => {
+                                    this.fs.writeFile(this.dataDir() + path, zipFileName, fileData, {replace: this.options.overwrite}).then((fileInfo) => {
                                         if (this.options.verbose) {
                                             console.log('File written', fileInfo);
                                         }
                                     }).catch((e) => {
-                                        console.error("Could not write file" + filename);
+                                        console.error("Could not write file" + zipFileName);
                                         console.error(e);
                                     });
                                 }).catch((e) => {
-                                    console.error("Could not create file " + filename);
+                                    console.error("Could not create file " + zipFileName);
                                     console.error(e);
                                 });
                             })
