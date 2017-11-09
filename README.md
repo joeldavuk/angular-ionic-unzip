@@ -8,6 +8,12 @@ Provides a simple wrapper using JSZip to unzip a file and save to the local file
 npm install angular-ionic-unzip
 ```
 
+Add jsZip include to your index.html placing in the assets folder.
+
+```<script src="assets/jszip.min.js"></script>```
+
+http://github.com/Stuk/jszip/
+
 ##Usage
 
 Add IonicUnzip to your app module providers 
@@ -37,10 +43,8 @@ export class Catalog {
     
     }
 ```
-This expects the zip file to already be downloaded on the local file system in the dataDiretory
-See details of the available directories here https://ionicframework.com/docs/native/file/
+This expects the zip file to already be downloaded on the local file system in the dataDirectory.
 
-You can override this with the dataDirectory option.
 
 <table class="table param-table" style="margin:0;">
   <thead>
@@ -58,7 +62,7 @@ You can override this with the dataDirectory option.
       <code>string</code>
     </td>
     <td>
-      <p>Base FileSystem. Please refer to the iOS and Android filesystems https://ionicframework.com/docs/native/file/</p>
+      <p>Base FileSystem. Please refer to the iOS and Android filesystems https://ionicframework.com/docs/native/file/ by default it's set to dataDirectory</p>
 </td>
   </tr>
   
