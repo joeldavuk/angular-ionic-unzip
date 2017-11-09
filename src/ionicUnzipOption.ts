@@ -1,22 +1,33 @@
-import {File} from "@ionic-native/file";
-
-
 export class IonicUnzipOptions {
 
-    constructor(private fs:File) {}
-
-    targetDir:string = '';
-    dataDirectory:string = '';
-    fileName:string = '';
-    overwrite:boolean = true;
-    verbose:boolean = false;
+    constructor() {
+    }
 
     /**
-     * Optionally override local file system directory
-     * @returns {string}
+     * Target directory to extract from relative to the data directory e.g '/images'
+     * @type {string}
      */
-    dataDir() {
-        return this.dataDirectory || this.fs.dataDirectory;
-    }
+    targetDir: string = '';
+    /**
+     * Over ride the default root directory (dataDirectory) see
+     * https://ionicframework.com/docs/native/file/ for more info
+     * @type {string}
+     */
+    dataDir: string = '';
+    /**
+     * Zip filename
+     * @type {string}
+     */
+    fileName: string = '';
+    /**
+     * Wether to overwrite existing files and directories
+     * @type {boolean}
+     */
+    overwrite: boolean = true;
+    /**
+     * Ouput file written info to the console
+     * @type {boolean}
+     */
+    verbose: boolean = false;
 
 }

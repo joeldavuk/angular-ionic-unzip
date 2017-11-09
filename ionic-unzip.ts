@@ -1,1 +1,1 @@
-export {IonicUnzipService} from './src/IonicUnzipService';
+export {IonicUnzip} from './src/IonicUnzip';
